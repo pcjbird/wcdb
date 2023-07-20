@@ -27,3 +27,10 @@ tools/version/build/
 
 # WCDB
 WCDB.framework
+
+# DS_Store
+.DS_Store
+
+# Outputs
+archives/
+build/

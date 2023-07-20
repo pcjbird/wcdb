@@ -11233,6 +11233,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 234F0370227A9E3D00DD65A2 /* WCDB.xcconfig */;
 			buildSettings = {
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "$(SRCROOT)/support/WCDBSwift.modulemap";
 			};
 			name = Debug;
@@ -11241,6 +11242,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 234F0370227A9E3D00DD65A2 /* WCDB.xcconfig */;
 			buildSettings = {
+				MACH_O_TYPE = staticlib;
 				MODULEMAP_FILE = "$(SRCROOT)/support/WCDBSwift.modulemap";
 			};
 			name = Release;
