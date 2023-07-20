@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		89B3FAAE2A69241A00C9769F /* WCDBSwift-XCFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 89B3FAAF2A69241B00C9769F /* Build configuration list for PBXAggregateTarget "WCDBSwift-XCFramework" */;
+			buildPhases = (
+				89B3FAB32A69245500C9769F /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = "WCDBSwift-XCFramework";
+			productName = "WCDBSwift-XCFramework";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		030C987A28D068B0008636DF /* TransactionGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C987828D068B0008636DF /* TransactionGuard.cpp */; };
 		030C987B28D068B0008636DF /* TransactionGuard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 030C987828D068B0008636DF /* TransactionGuard.cpp */; };
@@ -8914,6 +8928,10 @@
 						CreatedOnToolsVersion = 10.0;
 						ProvisioningStyle = Automatic;
 					};
+					89B3FAAE2A69241A00C9769F = {
+						CreatedOnToolsVersion = 14.3.1;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 23B5F75E1E1111C100E58396 /* Build configuration list for PBXProject "WCDB" */;
@@ -8945,6 +8963,7 @@
 				234F8AD3227B0B5400791E45 /* SwiftTests */,
 				03BF4AB72888F87C00A30500 /* BenchmarkTest */,
 				239E8A6F2160A5B100BCB308 /* Host */,
+				89B3FAAE2A69241A00C9769F /* WCDBSwift-XCFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -9104,6 +9123,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [ \"$ACTION\" = \"build\" ]; then \n    (cd ${SRCROOT}/../tools/templates && sh install.sh) || true\nfi\n";
+		};
+		89B3FAB32A69245500C9769F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/scripts/XCFrameworkBuildScript.sh\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -11157,10 +11193,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 234F036A227A9E3C00DD65A2 /* Debug.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64e,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = NO;
 				DEAD_CODE_STRIPPING = YES;
 				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = "debug-only";
@@ -11172,10 +11205,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 234F036C227A9E3D00DD65A2 /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					arm64e,
-				);
+				ARCHS = "$(ARCHS_STANDARD)";
 				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
 				DEAD_CODE_STRIPPING = YES;
 				SWIFT_ENFORCE_EXCLUSIVE_ACCESS = "debug-only";
@@ -11212,6 +11242,22 @@
 			baseConfigurationReference = 234F0370227A9E3D00DD65A2 /* WCDB.xcconfig */;
 			buildSettings = {
 				MODULEMAP_FILE = "$(SRCROOT)/support/WCDBSwift.modulemap";
+			};
+			name = Release;
+		};
+		89B3FAB02A69241B00C9769F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = WCDBSwift;
+			};
+			name = Debug;
+		};
+		89B3FAB12A69241B00C9769F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = WCDBSwift;
 			};
 			name = Release;
 		};
@@ -11313,6 +11359,15 @@
 			buildConfigurations = (
 				7521DDDB291EA349009642EF /* Debug */,
 				7521DDDC291EA349009642EF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		89B3FAAF2A69241B00C9769F /* Build configuration list for PBXAggregateTarget "WCDBSwift-XCFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89B3FAB02A69241B00C9769F /* Debug */,
+				89B3FAB12A69241B00C9769F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
