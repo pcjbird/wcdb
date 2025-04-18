@@ -16,7 +16,7 @@ Pod::Spec.new do |wcdb|
   wcdb.license      = { :type => "BSD", :file => "LICENSE" }
   wcdb.author       = { "Qiuwen-Chen" => "qwchen2008@163.com" }
   wcdb.module_name  = "WCDB"
-  wcdb.ios.deployment_target = "10.0"
+  wcdb.ios.deployment_target = "11.0"
   wcdb.osx.deployment_target = "10.13"
   wcdb.watchos.deployment_target = "7.0"
   wcdb.tvos.deployment_target = "12.4"
